@@ -1,0 +1,12 @@
+<h2>Chat Rooms</h2>
+<div>
+  <label for="newChatRoom">New Chat Room:</label>
+  <input type="text" id="newChatRoom" [(ngModel)]="newChatRoomName" name="newChatRoom">
+  <button (click)="createChatRoom()">Create</button>
+</div>
+
+<ul>
+  <li *ngFor="let room of chatRooms">
+    {{ room.name }} (Created at: {{ room.createdAt }})
+  </li>
+</ul>
